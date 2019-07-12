@@ -3,15 +3,16 @@ Online Shopping Reworked adalah toko online berbasis web yang menggunakan lumen 
 
 ## Proses
 Pada saat ini project sudah mampu melakukan:
-- Login
-- Melihat list barang yang ada di database
+- Login dan Register
+- Melihat list barang dan jumlah stock yang ada antar kantor/cabang
 - Memasukkan barang ke keranjang
 - Membeli barang yang ada di keranjang
+- Membeli barang khusus per kantor/cabang
+- Jumlah stock barang per kantor langsung berkurang
 
 Rencana penambahan fitur pada project ini adalah:
-- Menampilkan list barang dan ketersediaan barang antar kantor cabang
-- Membeli barang dari kantor cabang tertentu
 - Menghapus keranjang
+- Melihat history transaksi
 
 ## Cara Installasi
 ### Requirement
@@ -27,3 +28,5 @@ Rencana penambahan fitur pada project ini adalah:
 - buka file tersebut, kemudian ganti nama database menjadi 'TokoKomputer', ubah nama DB_Username dan DB_Password sesuai ketentuan database anda
 - buka kembali Terminal (Command Prompt), kemudian run 'php artisan migrate'
 - Jika sudah selesai run 'php -S localhost:8000 -t public', kemudian akses project lewat browser dengan mengetik url 'localhost:8000'
+
+# WIP
