@@ -35,17 +35,6 @@ class TokoKomputer extends Migration
            $table->text('deskripsi');
         });
 
-<<<<<<< HEAD
-=======
-        Schema::create('Keranjang', function (Blueprint $table){
-            $table->string('idBarang', 150);
-            $table->string('idUser', 150);
-            $table->integer('jumlah');
-            $table->foreign('idBarang')->references('idBarang')->on('Barang');
-            $table->foreign('idUser')->references('idUser')->on('Users');
-        });
-
->>>>>>> c0efa5846daff56516bf5fd3da2001d9f48a9c54
         Schema::create('Kantor', function (Blueprint $table){
             $table->string('idKantor', 150)->primary();
             $table->string('namaKantor', 150);
@@ -53,10 +42,7 @@ class TokoKomputer extends Migration
         });
 
         Schema::create('Stock', function (Blueprint $table){
-<<<<<<< HEAD
             $table->string('idStockBarang', 150)->primary();
-=======
->>>>>>> c0efa5846daff56516bf5fd3da2001d9f48a9c54
             $table->string('idBarang', 150);
             $table->string('idKantor', 150);
             $table->integer('jumlah');
@@ -64,7 +50,6 @@ class TokoKomputer extends Migration
             $table->foreign('idKantor')->references('idKantor')->on('Kantor');
         });
 
-<<<<<<< HEAD
         Schema::create('Keranjang', function (Blueprint $table){
             $table->string('idBarang', 150);
             $table->string('idUser', 150);
@@ -73,8 +58,6 @@ class TokoKomputer extends Migration
             $table->foreign('idUser')->references('idUser')->on('Users');
         });
 
-=======
->>>>>>> c0efa5846daff56516bf5fd3da2001d9f48a9c54
         Schema::create('Transaksi', function (Blueprint $table){
             $table->string('idTransaksi', 150)->primary();
             $table->string('idUser', 150);
@@ -89,17 +72,10 @@ class TokoKomputer extends Migration
 
         Schema::create('DetailTransaksi', function (Blueprint $table){
             $table->string('idTransaksi', 150);
-<<<<<<< HEAD
             $table->string('idStockBarang', 150);
             $table->integer('jumah');
             $table->foreign('idTransaksi')->references('idTransaksi')->on('Transaksi');
             $table->foreign('idStockBarang')->references('idStockBarang')->on('Stock');
-=======
-            $table->string('idBarang', 150);
-            $table->integer('jumah');
-            $table->foreign('idTransaksi')->references('idTransaksi')->on('Transaksi');
-            $table->foreign('idBarang')->references('idBarang')->on('Barang');
->>>>>>> c0efa5846daff56516bf5fd3da2001d9f48a9c54
         });
     }
 

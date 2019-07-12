@@ -53,7 +53,7 @@
                     }
                 ?>
                 <form action="/listBarang" method="POST">
-                <p class="btn btn-primary" onClick = "showAdder(<?php echo $data['idBarang'];?>);">Tambah ke keranjang</p>
+                <button type="button" class="btn btn-primary" onClick = "showAdder(<?php echo $data['idBarang'];?>);">Tambah ke keranjang</button>
                 <input style="display:none;" name="idBarang" value=<?php echo $data['idBarang'];?>>
                 <div class="adder" id=<?php echo $data['idBarang'];?>>
                     Jumlah barang: <input type="number" name="jumlahBarang" min="1" max="1000" value="1">

@@ -36,21 +36,32 @@
 
     <?php
         $i = 0;
-        foreach($barang as $data){
-            $i++;?>
-        <div class="card" style="width: 18rem; display:inline-block;">
-            <div class="card-body">
-                <p>Id Barang: <?php echo $data['idBarang'];?></p>
-                <p>Nama Barang: <?php echo $data['namaBarang'];?></p>
-                <p>Jumlah Barang: <?php echo $data['jumlah'];?></p>
-            </div>
-        </div>
-    <?php } ?>
 
-    <div class="wd-100"></div>
+        if(!$barang->first()){?>
+        <h3>Keranjang anda kosong</h3>
+        <?php
+        }  
+        else{
+            foreach($barang as $data){
+                $i++;?>
+                <div class="card" style="width: 18rem; display:inline-block;">
+                    <div class="card-body">
+                        <p>Id Barang: <?php echo $data['idBarang'];?></p>
+                        <p>Nama Barang: <?php echo $data['namaBarang'];?></p>
+                        <p>Jumlah Barang: <?php echo $data['jumlah'];?></p>
+                        <form action="/keranjangAnda" method="POST">
+                            <button class="btn btn-primary" name="idBarang" value = "<?php echo $data['idBarang'];?>" type="submit">Hapus</button>
+                        </form>
+                    </div>
+                </div>
+        <?php }?>
+        <div class="wd-100"></div>
+        <a class="btn btn-primary" href="/prosesTransaksi">Beli barang anda</a>            
+        <?php
+        }
+        ?>  
 
-    <a class="btn btn-primary" href="/prosesTransaksi">Beli barang anda</a>
-
+    
     <script>
     
     </script>

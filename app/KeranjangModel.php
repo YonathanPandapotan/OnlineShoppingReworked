@@ -10,6 +10,7 @@ class KeranjangModel extends Model
 {
 
     public $timestamps = false;
+    protected $fillable = ['idBarang','idUser','jumlah'];
     protected $table = 'Keranjang';
 
 }

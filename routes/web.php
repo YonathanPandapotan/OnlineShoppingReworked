@@ -28,3 +28,4 @@ $router->get('/logOut', 'MainController@logOut');
 $router->post('/prosesTransaksi', 'MainController@prosesTransaksi');
 $router->post('/login', 'MainController@login');
 $router->post('/daftarBaru', 'MainController@daftarBaru');
+$router->post('/keranjangAnda', 'MainController@hapusKeranjang');
