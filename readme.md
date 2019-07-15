@@ -1,6 +1,7 @@
 # Online Shopping Reworked
 Online Shopping Reworked adalah toko online berbasis web yang menggunakan lumen sebagai frameworknya. Tujuan pembuatan project ini adalah sebagai salah satu syarat kelulusan 'Pemrosesan Data Tersebar'
 
+# WIP
 ## Proses
 Pada saat ini project sudah mampu melakukan:
 - Login dan Register
@@ -9,9 +10,9 @@ Pada saat ini project sudah mampu melakukan:
 - Membeli barang yang ada di keranjang
 - Membeli barang khusus per kantor/cabang
 - Jumlah stock barang per kantor langsung berkurang
+- Menghapus keranjang
 
 Rencana penambahan fitur pada project ini adalah:
-- Menghapus keranjang
 - Melihat history transaksi
 
 ## Cara Installasi
@@ -31,4 +32,4 @@ Rencana penambahan fitur pada project ini adalah:
 - buka kembali Terminal (Command Prompt), kemudian run 'php artisan migrate'
 - Jika sudah selesai run 'php -S localhost:8000 -t public', kemudian akses project lewat browser dengan mengetik url 'localhost:8000'
 
-# WIP
+

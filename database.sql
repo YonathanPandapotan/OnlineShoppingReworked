@@ -37,7 +37,3 @@ BEGIN
     Select d.idStockBarang, (select idBarang from Stock where idStockBarang = NEW.idStockBarang), (select idKantor from Stock where idStockBarang = NEW.idStockBarang), d.jumah from DetailTransaksi as d where d.idTransaksi = NEW.idTransaksi
     ON DUPLICATE KEY UPDATE JUMLAH = Stock.jumlah - VALUES(jumlah);
 END//
-
-select t.idTransaksi, sb.idStockBarang, sb.jumlah from Transaksi as t, StockBarang as sb where 1 = NEW.idTransaksi and sb.idUser = t.idUser;
-
-insert into `DetailTransaksi` (`idTransaksi`, `idStockBarang`, `jumah`) values ("S1NYOVZoOFdVbQ==", "1", 1);

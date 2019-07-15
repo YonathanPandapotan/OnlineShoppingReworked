@@ -146,9 +146,11 @@ class MainController extends Controller
 
     public function hapusKeranjang(Request $request){
         $hapus = KeranjangModel::where('idBarang', $request->input('idBarang'))->where('idUser', $request->user('api')['idUser'])->delete();
-        // $hapus;
         return redirect('keranjangAnda');
-        // return response($hapus);
+    }
+
+    public function listTransaksi(){
+        return view('ListTransaksi');
     }
 
     public function logOut(Request $request){

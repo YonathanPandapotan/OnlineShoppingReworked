@@ -25,7 +25,7 @@
                 <a class="nav-link" href="/keranjangAnda">Keranjang Anda</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Transaksi Anda</a>
+                <a class="nav-link" href="/listTransaksi">Transaksi Anda</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Logout</a>
@@ -50,7 +50,6 @@
                         <?php
                     }
                 ?>
-                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
             </div>
             <br>
                 <h4>Harga Total</h4>

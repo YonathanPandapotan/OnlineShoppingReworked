@@ -25,7 +25,7 @@
                 <a class="nav-link" href="/keranjangAnda">Keranjang Anda</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Transaksi Anda</a>
+                <a class="nav-link" href="/listTransaksi">Transaksi Anda</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/logOut">Logout</a>
@@ -59,7 +59,6 @@
                     Jumlah barang: <input type="number" name="jumlahBarang" min="1" max="1000" value="1">
                     <input class="btn btn-primary" type="submit" name="submit" value="Tambah Keranjang">
                 </div>
-                <input class="btn btn-primary" type="submit" name="submit" value="Beli Barang">
                 </form>
             </div>
         </div>
