@@ -39,7 +39,7 @@
     <br>
 
     <?php 
-        foreach($dataTransaksi as $data){
+        foreach($detailTransaksi as $data){
             ?>
                 <div class="container">
                     <p>Id transaksi: <?php echo $data['idTransaksi']?> </p>
@@ -47,7 +47,14 @@
                     <p>Harga total transaksi: <?php echo $data['hargaTotal']?> </p>
                     <p>Jumlah total barang yang dibeli: <?php echo $data['jumlahTotal']?> </p>
                     <p>Alamat tujuan: <?php echo $data['alamat']?> </p>
-                    <a href='listTransaksi/show/<?php echo $data['idTransaksi']?>'>Lihat Detail Transaksi</a>
+                    <p>List barang yang dibeli:</p>
+                    <?php
+                        foreach($detailBarang as $anotherData){
+                            ?>
+                            <p>Nama Barang: <?php echo $anotherData['namaBarang'] ?> Jumlah: <?php echo $anotherData['jumah']?> Asal Kantor: <?php echo $anotherData['namaKantor']?> </p>
+                            <?php
+                        }
+                    ?>
                 </div>
             <?php
         }

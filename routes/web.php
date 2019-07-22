@@ -22,6 +22,7 @@ $router->get('/test', 'MainController@test');
 $router->get('/listBarang', 'MainController@listBarang');
 $router->post('/listBarang', 'MainController@tambahKeranjang');
 $router->get('/listTransaksi', 'MainController@listTransaksi');
+$router->get('/listTransaksi/show/{id}', 'MainController@detailTransaksi');
 $router->get('/keranjangAnda', 'MainController@lihatKeranjang');
 $router->get('/prosesTransaksi', 'MainController@persiapkanTransaksi');
 $router->get('/daftarBaru', 'MainController@daftarBaru');

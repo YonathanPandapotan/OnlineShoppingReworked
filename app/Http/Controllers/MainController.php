@@ -145,12 +145,21 @@ class MainController extends Controller
     }
 
     public function hapusKeranjang(Request $request){
-        $hapus = KeranjangModel::where('idBarang', $request->input('idBarang'))->where('idUser', $request->user('api')['idUser'])->delete();
+        $hapus = KeranjangModel::where('idBarang', $request->input('idBarang'))->where('Transaksi.idUser', $request->user('api')['idUser'])->delete();
         return redirect('keranjangAnda');
     }
 
-    public function listTransaksi(){
-        return view('ListTransaksi');
+    public function listTransaksi(Request $request){
+        $data = TransaksiModel::join('Alamat', 'Transaksi.idAlamat', '=', 'Alamat.idAlamat')->where('Transaksi.idUser', $request->user('api')['idUser'])->get();
+        // return response($data);
+        return view('ListTransaksi', ['dataTransaksi' => $data]);
+    }
+
+    public function detailTransaksi($id){
+        $detailTransaksi = TransaksiModel::join('Alamat', 'Transaksi.idAlamat', '=', 'Alamat.idAlamat')->where('idTransaksi', $id)->get();
+        $detailBarang = DetailTransaksiModel::join('Stock', 'DetailTransaksi.idStockBarang', '=', 'Stock.idStockBarang')->join('Barang', 'Stock.idBarang', '=','Barang.idBarang')->join('Kantor', 'Stock.idKantor', '=', 'Kantor.idKantor')->where('idTransaksi', $id)->get();
+        // return response($detailBarang);
+        return view('DetailTransaksi', ['detailTransaksi' => $detailTransaksi, 'detailBarang' => $detailBarang]);
     }
 
     public function logOut(Request $request){
