@@ -106,7 +106,7 @@
                     <p>Harga total transaksi: <?php echo $data['hargaTotal']?> </p>
                     <p>Jumlah total barang yang dibeli: <?php echo $data['jumlahTotal']?> </p>
                     <p>Alamat tujuan: <?php echo $data['alamat']?> </p>
-                    <p>List barang yang dibeli:</p>
+                    <p>List barang yang dibeli</p>
                     <?php
                         foreach($detailBarang as $anotherData){
                             ?>
