@@ -12,11 +12,11 @@
 */
 
 $router->get('/', function () use ($router) {
-    return $router->app->version();
+    return redirect('login');
 });
 
 $router->get('/login', function () use ($router) {
-    return view('LoginPage');
+    return view('LoginPage', ['error'=>'']);
 });
 $router->get('/test', 'MainController@test');
 $router->get('/listBarang', 'MainController@listBarang');

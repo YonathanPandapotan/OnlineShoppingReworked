@@ -1,9 +1,9 @@
 insert into Barang values
-("1", "Mouse", 5000, "Mouse ErGeBeh terbaru dan termurah. Dijamin jos!!"),
-("2", "Keyboard", 10000, "Keyboard 1 juta umat. Meskipun tidak terlalu bagus, tetapi keyboard ini dijamin mantap dipakai"),
-("3", "Headset", 15000, "Kehilangan pendengaran atas penggunaan headset ini bukanlah tanggungan kami"),
-("4", "Mousepad", 22000, "Mousepad khusus gaming, dijamin akan membuat aim-mu menjadi sangat baik dan akurat"),
-("5", "Flashdisk", 7000, "Harusnya sih flashdrive, tapi sudahlah");
+("1", "Mouse", 5000, "Mouse ErGeBeh terbaru dan termurah. Dijamin jos!!", "https://thegreatdevice.com/wp-content/uploads/2018/04/Logitech-G303-Daedalus-Apex-Performance-Edition-Gaming-Mouse-300x180.jpg"),
+("2", "Keyboard", 10000, "Keyboard 1 juta umat. Meskipun tidak terlalu bagus, tetapi keyboard ini dijamin mantap dipakai", "https://www.meckeys.com/wp-content/uploads/2019/05/Gk61-Main-300x180.jpg"),
+("3", "Headset", 15000, "Kehilangan pendengaran atas penggunaan headset ini bukanlah tanggungan kami", "https://www.thetechy.com/wp-content/uploads/2017/04/HyperX-Cloud-Revolver-S-with-Dongle-300x180.jpg"),
+("4", "Mousepad", 22000, "Mousepad khusus gaming, dijamin akan membuat aim-mu menjadi sangat baik dan akurat", "https://katajansen.id/wp-content/uploads/2018/09/Mousepad-Untuk-Game-300x180.jpg"),
+("5", "Flashdisk", 7000, "Harusnya sih flashdrive, tapi sudahlah", "https://cdn.inwepo.co/wp-content/uploads/2014/06/08082400/Flashdisk-300x180.jpg");
 
 insert into Kantor values
 ("1", "Jakarta", "Jln. di jakarta"),

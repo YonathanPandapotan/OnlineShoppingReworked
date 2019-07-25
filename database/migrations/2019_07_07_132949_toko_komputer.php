@@ -33,6 +33,7 @@ class TokoKomputer extends Migration
            $table->string('namaBarang', 150);
            $table->integer('hargaBarang');
            $table->text('deskripsi');
+           $table->text('url');
         });
 
         Schema::create('Kantor', function (Blueprint $table){

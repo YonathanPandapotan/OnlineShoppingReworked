@@ -34,7 +34,7 @@ class MainController extends Controller
             ]);
         $user = UserModel::where('email', $request->input('email'))->first();
         if($user == null){
-            return response('user not found');
+            return view('LoginPage', ['error' => 'User tidak ditemukan']);
         }
 
         if($request->input('password') == $user->password){
@@ -43,7 +43,7 @@ class MainController extends Controller
             $cookie = Cookie::forever('auth_token', $auth_token);
             return redirect('listBarang')->withCookie($cookie);
         }else{
-            return response()->json(['status' => 'fail'],401);
+            return view('LoginPage', ['error' => 'Password salah']);
         }
   
 
@@ -57,11 +57,19 @@ class MainController extends Controller
 
     public function tambahKeranjang(Request $request){
         if($request->input('submit') == 'Tambah Keranjang'){
-            $input = new KeranjangModel();
-            $input->idBarang = $request->input('idBarang');
-            $input->idUser = $request->user('api')['idUser'];
-            $input->jumlah = $request->input('jumlahBarang');
-            $input->save();
+            $input = KeranjangModel::where('idBarang', $request->input('idBarang'))->where('idUser', $request->user('api')['idUser'])->first();
+            if($input === null){
+                $baru = new KeranjangModel();
+                $baru->idUser = $request->user('api')['idUser'];
+                $baru->idBarang = $request->input('idBarang');
+                $baru->jumlah = $request->input('jumlahBarang');
+                $baru->save();
+            }
+            else{
+                $input->jumlah = $input->jumlah + $request->input('jumlahBarang');
+                $input->save();
+            }
+            
             return redirect('/listBarang');
         }
         else{
@@ -145,7 +153,7 @@ class MainController extends Controller
     }
 
     public function hapusKeranjang(Request $request){
-        $hapus = KeranjangModel::where('idBarang', $request->input('idBarang'))->where('Transaksi.idUser', $request->user('api')['idUser'])->delete();
+        $hapus = KeranjangModel::where('idBarang', $request->input('idBarang'))->where('idUser', $request->user('api')['idUser'])->delete();
         return redirect('keranjangAnda');
     }
 
