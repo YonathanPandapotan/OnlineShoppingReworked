@@ -25,11 +25,11 @@ Rencana penambahan fitur pada project ini adalah:
 - Cari project kemudian extract di folder mana saja yang anda inginkan
 - Buka Terminal (Command Prompt), kemudian change directory (cd) ke lokasi tersebut
 - run 'composer install'
-- ubah nama file '.env.example' menjadi '.env', atau copy paste file tersebut dan ubah namanya menjadi demikian
+- ubah nama file '.env.example' menjadi '.env', bagi pengguna windows gunakan command 'ren '.env.example' '.env''
 - buka file tersebut, kemudian ganti nama database menjadi 'TokoKomputer', ubah nama DB_Username dan DB_Password sesuai ketentuan database anda
 - Create database di database anda dengan nama 'TokoKomputer'
-- Buka file database.sql, kemudian copy paste semuanya di terminal mysql anda
 - buka kembali Terminal (Command Prompt), kemudian run 'php artisan migrate'
+- Buka file database.sql, kemudian copy paste semuanya di terminal mysql anda
 - Jika sudah selesai run 'php -S localhost:8000 -t public', kemudian akses project lewat browser dengan mengetik url 'localhost:8000'
 
 
